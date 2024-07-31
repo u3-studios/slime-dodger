@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xubl3bvpnp18"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_kvbsq"]
+
+[sub_resource type="Theme" id="Theme_i35om"]
+default_font_size = 100
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_kvbsq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 302.0
+offset_top = 44.0
+offset_right = 342.0
+offset_bottom = 113.0
+theme = SubResource("Theme_i35om")
+theme_override_font_sizes/font_size = 50

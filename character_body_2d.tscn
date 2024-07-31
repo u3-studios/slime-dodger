@@ -1,0 +1,225 @@
+[gd_scene load_steps=29 format=3 uid="uid://chn02x2jql888"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_hy6il"]
+[ext_resource type="Texture2D" uid="uid://ihf5ptilkyuo" path="res://brackeys_platformer_assets/sprites/knight.png" id="1_q60xo"]
+[ext_resource type="Texture2D" uid="uid://y2qwk1btr435" path="res://green-arrow-png-1.png" id="3_gv146"]
+[ext_resource type="Texture2D" uid="uid://bsdud5ffywd7c" path="res://respawn.png" id="4_mkvbd"]
+[ext_resource type="PackedScene" uid="uid://26yo7yp1qdwj" path="res://game_maneger.tscn" id="5_3qo53"]
+[ext_resource type="Texture2D" uid="uid://cgcn2bp4fxps8" path="res://menu_button.png" id="6_fwkhg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6qwb"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj4a1"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbl0x"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06tq7"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icq0m"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq6tm"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c46gv"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f68iw"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl7pd"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3gt0"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c23mc"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhbmq"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lavey"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arffw"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4yjt"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wdxu"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_015w8"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_386qx"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6qpe"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj7x7"]
+atlas = ExtResource("1_q60xo")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lrb82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6qwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj4a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbl0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06tq7")
+}],
+"loop": true,
+"name": &"idel",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icq0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq6tm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c46gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f68iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl7pd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3gt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c23mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhbmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lavey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arffw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4yjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wdxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_015w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_386qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6qpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj7x7")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf2jx"]
+size = Vector2(9, 16)
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+z_index = 3
+collision_layer = 2
+script = ExtResource("1_hy6il")
+
+[node name="score" type="Label" parent="."]
+texture_filter = 1
+offset_left = -34.0
+offset_top = -81.0
+offset_right = 65.0
+offset_bottom = -58.0
+text = "score: "
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -13)
+sprite_frames = SubResource("SpriteFrames_lrb82")
+animation = &"idel"
+autoplay = "idel"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -9)
+shape = SubResource("RectangleShape2D_bf2jx")
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(116, 50)
+rotation = 3.14159
+scale = Vector2(0.127482, 0.126977)
+texture_normal = ExtResource("3_gv146")
+action = "ui_right"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(31, 20)
+scale = Vector2(0.125, 0.127572)
+texture_normal = ExtResource("3_gv146")
+action = "ui_left"
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2(-60, 6)
+rotation = 1.5708
+scale = Vector2(0.125, 0.127572)
+texture_normal = ExtResource("3_gv146")
+passby_press = true
+action = "ui_accept"
+
+[node name="respawn" type="TouchScreenButton" parent="."]
+position = Vector2(49, -69)
+scale = Vector2(0.0523809, 0.052381)
+texture_normal = ExtResource("4_mkvbd")
+passby_press = true
+action = "respawn"
+
+[node name="GameManeger" parent="." instance=ExtResource("5_3qo53")]
+unique_name_in_owner = true
+
+[node name="Meny" type="TouchScreenButton" parent="."]
+position = Vector2(78, -75)
+scale = Vector2(0.0275, 0.0275)
+texture_normal = ExtResource("6_fwkhg")
+action = "open menu"

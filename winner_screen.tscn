@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://ug8pkcv0or2s"]
+
+[ext_resource type="Script" path="res://winner_screen.gd" id="1_tpvnk"]
+[ext_resource type="Script" path="res://play_again_Button.gd" id="2_6x35n"]
+[ext_resource type="Script" path="res://Next Level button.gd" id="3_roonv"]
+
+[node name="winner screan" type="Node2D"]
+position = Vector2(195, 142)
+script = ExtResource("1_tpvnk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 147.0
+offset_top = 36.0
+offset_right = 234.0
+offset_bottom = 76.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="time" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 81
+text = "time"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 35
+
+[node name="Level completed" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Level completed"
+
+[node name="Next_Level" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+text = "Next Level"
+script = ExtResource("3_roonv")
+
+[node name="Play again" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 39
+action_mode = 0
+text = "Play again"
+script = ExtResource("2_6x35n")
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_button_down"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_pressed"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_button_down"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_pressed"]
