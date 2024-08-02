@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b01ako5njs2vu" path="res://coin.tscn" id="5_i1ygi"]
 [ext_resource type="PackedScene" uid="uid://bwngv0d87hi50" path="res://killzone.tscn" id="6_bfbwa"]
 [ext_resource type="PackedScene" uid="uid://btai7t2sr27jg" path="res://slime.tscn" id="7_3lfjv"]
+[ext_resource type="AudioStream" uid="uid://ci52gqoqgwkje" path="res://brackeys_platformer_assets/music/Monkeys Spinning Monkeys.mp3" id="9_bam58"]
 [ext_resource type="PackedScene" uid="uid://xubl3bvpnp18" path="res://timer.tscn" id="9_fk346"]
-[ext_resource type="AudioStream" uid="uid://bco5y5yr6w4ep" path="res://Online Camp -Høst2020 Mix1.0.mp3" id="10_qmsdi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h0emh"]
 
@@ -786,7 +786,7 @@ position = Vector2(1, 21)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, -6)
-zoom = Vector2(4, 4)
+zoom = Vector2(3.5, 3.5)
 limit_bottom = 300
 limit_smoothed = true
 
@@ -892,5 +892,5 @@ position = Vector2(-75, -86)
 [node name="CanvasLayer" parent="." instance=ExtResource("9_fk346")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_qmsdi")
+stream = ExtResource("9_bam58")
 autoplay = true

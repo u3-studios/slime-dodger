@@ -188,10 +188,10 @@ collision_layer = 2
 script = ExtResource("1_hy6il")
 
 [node name="score" type="Label" parent="."]
-offset_left = -30.0
-offset_top = -70.0
-offset_right = 69.0
-offset_bottom = -47.0
+offset_left = -31.0
+offset_top = -82.0
+offset_right = 68.0
+offset_bottom = -59.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "score: "
 metadata/_edit_use_anchors_ = true
@@ -207,28 +207,28 @@ position = Vector2(1.5, -9)
 shape = SubResource("RectangleShape2D_bf2jx")
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(116, 50)
+position = Vector2(161, 89)
 rotation = 3.14159
-scale = Vector2(0.127482, 0.126977)
+scale = Vector2(0.17483, 0.174138)
 texture_normal = ExtResource("3_m6uo2")
 action = "ui_right"
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(31, 20)
-scale = Vector2(0.125, 0.127572)
+position = Vector2(45, 47)
+scale = Vector2(0.173387, 0.176955)
 texture_normal = ExtResource("3_m6uo2")
 action = "ui_left"
 
 [node name="up" type="TouchScreenButton" parent="."]
-position = Vector2(-60, 6)
+position = Vector2(-97, 30)
 rotation = 1.5708
-scale = Vector2(0.125, 0.127572)
+scale = Vector2(0.172524, 0.176074)
 texture_normal = ExtResource("3_m6uo2")
 passby_press = true
 action = "ui_accept"
 
 [node name="respawn" type="TouchScreenButton" parent="."]
-position = Vector2(49, -69)
+position = Vector2(61, -79)
 scale = Vector2(0.0523809, 0.052381)
 texture_normal = ExtResource("4_mkvbd")
 passby_press = true
@@ -238,7 +238,7 @@ action = "respawn"
 unique_name_in_owner = true
 
 [node name="Meny" type="TouchScreenButton" parent="."]
-position = Vector2(78, -75)
+position = Vector2(100, -84)
 scale = Vector2(0.0275, 0.0275)
 texture_normal = ExtResource("6_fwkhg")
 action = "open menu"

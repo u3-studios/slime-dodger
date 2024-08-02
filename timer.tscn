@@ -9,10 +9,10 @@ default_font_size = 100
 script = ExtResource("1_kvbsq")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 302.0
-offset_top = 92.0
-offset_right = 342.0
-offset_bottom = 161.0
+offset_left = 265.0
+offset_top = 75.0
+offset_right = 305.0
+offset_bottom = 144.0
 theme = SubResource("Theme_i35om")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
