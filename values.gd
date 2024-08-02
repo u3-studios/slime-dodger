@@ -11,3 +11,5 @@ var level = 1
 var air_jump = 1
 
 var is_alive = true
+
+var coins = 0

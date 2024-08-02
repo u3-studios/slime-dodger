@@ -2,11 +2,19 @@ extends Node2D
 
 @onready var time = $MarginContainer/VBoxContainer/time
 @onready var next_level = $MarginContainer/VBoxContainer/Next_Level
-
+@onready var levels = $MarginContainer/VBoxContainer/Levels
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
+	var points = 90000 - float(Values.time) * 1000
+	if OS.has_feature("web"):
+		next_level.visible = false
+		levels.visible = false
+		JavaScriptBridge.eval("""
+		fetch(`https://gamesbot.u3.style/highscore/"""+str(points)+"""?game=slimedodger"""+str(Values.level)+"""&${window.location.search.substr(1)}`)
+		""")
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
