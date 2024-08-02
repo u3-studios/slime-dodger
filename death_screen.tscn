@@ -69,6 +69,6 @@ text = "quit
 "
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play_again" to="." method="_on_play_again_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Levels" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
