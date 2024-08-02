@@ -23,7 +23,7 @@ Values="*res://values.gd"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
+window/stretch/aspect="keep_height"
 
 [input]
 
