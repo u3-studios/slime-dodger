@@ -1,48 +1,67 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhko030gf2ppw"]
+[gd_scene load_steps=7 format=3 uid="uid://bhko030gf2ppw"]
 
-[ext_resource type="Script" path="res://Next Level button.gd" id="1_8nc3m"]
-[ext_resource type="Script" path="res://play_again_Button.gd" id="2_310ls"]
+[ext_resource type="Texture2D" uid="uid://bkfdqtmv4pwxt" path="res://bilder/level_1.png" id="1_5yy6p"]
+[ext_resource type="Script" path="res://levels.gd" id="1_f5k0j"]
+[ext_resource type="Script" path="res://Next Level button.gd" id="2_udnys"]
+[ext_resource type="Texture2D" uid="uid://cdmmaiehiwckl" path="res://bilder/2.png" id="3_0ow8g"]
+[ext_resource type="Script" path="res://play_again_Button.gd" id="4_mt4cb"]
+[ext_resource type="Texture2D" uid="uid://d2ut8ud2faoiu" path="res://bilder/3.png" id="5_1f0rj"]
 
-[node name="levels" type="Node2D"]
+[node name="Levels" type="Node2D"]
+script = ExtResource("1_f5k0j")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 147.0
-offset_top = 36.0
-offset_right = 234.0
-offset_bottom = 76.0
+offset_top = 34.0
+offset_right = 679.0
+offset_bottom = 1743.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="time" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Levels" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 81
-text = "time"
+theme_override_font_sizes/font_size = 100
+text = "Levels"
 horizontal_alignment = 1
 vertical_alignment = 1
-justification_flags = 35
 
-[node name="Level completed" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 45
-text = "Level completed"
-
-[node name="Next_Level" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Level_1" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 39
-text = "Next Level"
-script = ExtResource("1_8nc3m")
+icon = ExtResource("1_5yy6p")
+flat = true
+script = ExtResource("2_udnys")
 
-[node name="Play again" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="level_2" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 39
 action_mode = 0
-text = "Play again"
-script = ExtResource("2_310ls")
+icon = ExtResource("3_0ow8g")
+flat = true
+script = ExtResource("4_mt4cb")
 
-[connection signal="button_down" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_button_down"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_pressed"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_button_down"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_pressed"]
+[node name="level_3" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 81
+action_mode = 0
+icon = ExtResource("5_1f0rj")
+flat = true
+script = ExtResource("4_mt4cb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(420, 976)
+zoom = Vector2(0.3, 0.3)
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Level_1" to="MarginContainer/VBoxContainer/Level_1" method="_on_button_down"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/level_2" to="MarginContainer/VBoxContainer/level_2" method="_on_button_down"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/level_2" to="MarginContainer/VBoxContainer/level_2" method="_on_pressed"]
+[connection signal="button_down" from="MarginContainer/VBoxContainer/level_3" to="MarginContainer/VBoxContainer/level_3" method="_on_button_down"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/level_3" to="MarginContainer/VBoxContainer/level_3" method="_on_pressed"]

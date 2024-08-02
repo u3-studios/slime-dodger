@@ -45,7 +45,13 @@ action_mode = 0
 text = "Play again"
 script = ExtResource("2_6x35n")
 
+[node name="Levels" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Levels"
+
 [connection signal="button_down" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_button_down"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Next_Level" to="MarginContainer/VBoxContainer/Next_Level" method="_on_pressed"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_button_down"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play again" to="MarginContainer/VBoxContainer/Play again" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]

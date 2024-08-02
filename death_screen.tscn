@@ -8,6 +8,10 @@ script/source = "extends Node2D
 func _on_quit_pressed():
 	get_tree().quit()
 
+
+
+func _on_levels_pressed():
+	get_tree().change_scene_to_file(\"res://levels.tscn\")
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_1fqxv"]
@@ -40,13 +44,21 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 63
 text = "Play Again"
-flat = true
+script = ExtResource("2_ir367")
+
+[node name="Levels" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 63
+text = "Levels"
 script = ExtResource("2_ir367")
 
 [node name="quit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "quit
 "
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Play_again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Levels" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

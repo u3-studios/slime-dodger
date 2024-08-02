@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_hy6il"]
 [ext_resource type="Texture2D" uid="uid://ihf5ptilkyuo" path="res://brackeys_platformer_assets/sprites/knight.png" id="1_q60xo"]
-[ext_resource type="Texture2D" uid="uid://y2qwk1btr435" path="res://green-arrow-png-1.png" id="3_gv146"]
+[ext_resource type="Texture2D" uid="uid://y2qwk1btr435" path="res://bilder/green-arrow-png-1.png" id="3_m6uo2"]
 [ext_resource type="Texture2D" uid="uid://bsdud5ffywd7c" path="res://respawn.png" id="4_mkvbd"]
 [ext_resource type="PackedScene" uid="uid://26yo7yp1qdwj" path="res://game_maneger.tscn" id="5_3qo53"]
 [ext_resource type="Texture2D" uid="uid://cgcn2bp4fxps8" path="res://menu_button.png" id="6_fwkhg"]
@@ -224,20 +224,20 @@ shape = SubResource("RectangleShape2D_bf2jx")
 position = Vector2(116, 50)
 rotation = 3.14159
 scale = Vector2(0.127482, 0.126977)
-texture_normal = ExtResource("3_gv146")
+texture_normal = ExtResource("3_m6uo2")
 action = "ui_right"
 
 [node name="left" type="TouchScreenButton" parent="."]
 position = Vector2(31, 20)
 scale = Vector2(0.125, 0.127572)
-texture_normal = ExtResource("3_gv146")
+texture_normal = ExtResource("3_m6uo2")
 action = "ui_left"
 
 [node name="up" type="TouchScreenButton" parent="."]
 position = Vector2(-60, 6)
 rotation = 1.5708
 scale = Vector2(0.125, 0.127572)
-texture_normal = ExtResource("3_gv146")
+texture_normal = ExtResource("3_m6uo2")
 passby_press = true
 action = "ui_accept"
 

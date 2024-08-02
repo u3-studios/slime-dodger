@@ -18,3 +18,7 @@ func _process(delta):
 		print("hi")
 
 
+
+
+func _on_levels_pressed():
+	get_tree().change_scene_to_file("res://levels.tscn")
