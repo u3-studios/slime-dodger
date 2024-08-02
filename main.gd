@@ -1,5 +1,6 @@
 extends Node2D
 @onready var coins = $coin5
+@onready var killzone = $"."
 
 
 # Called when the node enters the scene tree for the first time.

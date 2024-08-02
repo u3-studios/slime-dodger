@@ -11,6 +11,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
+	Values.is_alive = true
 	if Values.level == 1:
 		get_tree().change_scene_to_file("res://main.tscn")
 	elif Values.level == 2:

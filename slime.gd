@@ -10,10 +10,6 @@ var direction = 1
 @onready var ray_cast_down_left = $RayCastDownLeft
 @onready var animated_sprite = $AnimatedSprite2D
 
-func _ready():
-	ray_cast_down_left.add_exception(get_parent().get_node("CharacterBody2D"))
-	ray_cast_down_right.add_exception(get_parent().get_node("animated_sprite"))
-	ray_cast_right.add_exception(get_parent().get_node("animated_sprite"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

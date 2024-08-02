@@ -524,7 +524,7 @@ position = Vector2(0, 32)
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, -6)
 zoom = Vector2(4, 4)
-limit_bottom = 280
+limit_bottom = 330
 limit_smoothed = true
 
 [node name="killzone" parent="." instance=ExtResource("4_2ojir")]
@@ -578,10 +578,10 @@ position = Vector2(425, -150)
 position = Vector2(167, -151)
 
 [node name="coin" parent="coin5" instance=ExtResource("3_lt3nc")]
-position = Vector2(176, 97)
+position = Vector2(191, -150)
 
 [node name="coin2" parent="coin5" instance=ExtResource("3_lt3nc")]
-position = Vector2(117, 59)
+position = Vector2(109, 10)
 
 [node name="coin3" parent="coin5" instance=ExtResource("3_lt3nc")]
 position = Vector2(-23, -153)
@@ -621,7 +621,7 @@ position = Vector2(859, -22)
 position = Vector2(271, 138)
 
 [node name="slime6" parent="slime/slime8" instance=ExtResource("7_wkn31")]
-position = Vector2(58, -75)
+position = Vector2(55, -75)
 
 [node name="slime4" parent="slime/slime8" instance=ExtResource("7_wkn31")]
 position = Vector2(-435, 21)
