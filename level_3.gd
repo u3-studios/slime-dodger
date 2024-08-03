@@ -11,4 +11,3 @@ func _ready():
 func _process(delta):
 	if coin_level_3.get_child_count() == 0:
 		get_tree().change_scene_to_file("res://winner_screen.tscn")
-
