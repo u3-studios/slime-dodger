@@ -6,11 +6,12 @@
 script/source = "extends Node2D
 
 @onready var levels: Button = $PanelContainer/VBoxContainer/Levels
+@onready var quit: Button = $PanelContainer/VBoxContainer/quit
 
 func _ready():
 	if OS.has_feature(\"web\"):
 		levels.visible = false
-		print(\"asdasdj\")
+		quit.visible = false
 		JavaScriptBridge.eval(\"\"\"
 		fetch(`https://gamesbot.u3.style/highscore/\"\"\"+str(Values.coins)+\"\"\"?game=slimedodger\"\"\"+str(Values.level)+\"\"\"&${window.location.search.substr(1)}`)
 		\"\"\")
